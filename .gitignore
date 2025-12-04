@@ -1,0 +1,8 @@
+# cache folder
+./api/_pycache_
+
+# secrets
+./api/api_secret.py
+
+# ignore data for now
+./film.json
