@@ -1,8 +1,10 @@
 # cache folder
-/api/_pycache_
+/api/__pycache__/
+/db/__pycache__/
 
 # secrets
 /api/api_secret.py
+/db/db_secret.py
 
 # ignore data for now
 film.json
