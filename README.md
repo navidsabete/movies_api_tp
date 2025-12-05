@@ -31,9 +31,10 @@
 
 Vous êtes prêt à faire votre première requête pour fetcher des données de l'API donc
 - 8. Démarrer l'app Flask
-- 9. Une fois la page d'accueil ouverte, mettez à jour l'URL en ajoutant l'endpoint */movies/callapi*
-- 10. Un début de jeu d'essai sera alimenté dans la DB
-- 11. Si vous voulez ajouter un autre film
+- 9. Créer un nouvel utilisateur puis se connecter avec celui-ci
+- 10. Une fois la page d'accueil ouverte, mettez à jour l'URL en ajoutant l'endpoint */movies/callapi*
+- 11. Un début de jeu d'essai sera alimenté dans la DB
+- 12. Si vous voulez ajouter un autre film
     - a. Mettre à jour **search_title = "&s=[movie title]"** par une autre valeur souhaitée (exemple : 'harry potter')
     - b. Rédémarrer l'app Flask et répéter l'étape 9 ci-dessus
 
