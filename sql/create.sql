@@ -18,7 +18,7 @@ CREATE TABLE users (
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     pwd VARCHAR(255)
-)
+);
 
 ALTER TABLE films MODIFY 
 released INT;

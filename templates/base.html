@@ -34,6 +34,13 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+            {% if session.get("user_id") %}
+                <!-- Si l'utilisateur est connecté -->
+                <a href="{{ url_for('logout') }}" class="btn btn-danger">Se déconnecter</a>
+            {% endif %}
+>>>>>>> d891a53 (logini)
         </div>
     </nav>
     <div class="container">
