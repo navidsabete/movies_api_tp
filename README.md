@@ -19,11 +19,11 @@
         - flask
         - requests
 6. Pour pouvoir effectuer des requêtes sur l'API OMDb :
-    - a. Générer votre clé API à travers l'URL suivante https://www.omdbapi.com/apikey.aspx en renseignant : **FREE! (1,0000 daily limit)**, votre **adresse mail**, **prénom**, **nom**, **utilisation** : **Educational use for learning to use an API**. Suivre les étapes pour activer votre clé.
+    - a. Générer votre clé API à travers l'URL suivante https://www.omdbapi.com/apikey.aspx en renseignant : **FREE! (1,0000 daily limit)**, votre **adresse mail**, **prénom**, **nom**, [**utilisation** : **Educational use for learning to use an API**]. Suivre les étapes pour activer votre clé.
     - b. Insérer votre clé dans *'api/api_secret.py'* avec ce nommage **key = '[votre clé générée]'**'
     - c. Pour que la requête fonctionne avec succès, un paramètre d'attribut de **movie** doit être renseigné, donc dans *'api/api_secret.py'* indiquez une valeur pour rechercher un film et commencer à créer un jeu d'essai. Nommage : **search_title = "&s=[movie title]"** (exemple : 'star' pour 'star wars', 'star trek')
 7. Pour la connexion avec MiniNetflixDB avec l'app et pour alimenter votre jeu d'essai, les étapes sont les suivantes :
-    a. mettre à jour les valeurs dans *'db/db_secret.py'* avec ce nommage
+    - a. mettre à jour les valeurs dans *'db/db_secret.py'* avec ce nommage
         - **_un = "*[utilisateur configuré lors de l'installation d'Oracle DB]*"**
         - **_cs = "*[Hostname:Port configuré lors de l'installation d'Oracle DB]/[ServiceName configuré   lors  de l'installation d'Oracle DB]*"**
         - **_pw = '*[mot de passe choisi lors de l'installation d'Oracle DB]*'**
@@ -51,8 +51,7 @@ Vous êtes prêt à faire votre première requête pour fetcher des données de 
 | Navid SABETE ISFAHANI  | Tahina HONI RIKA |
 | -------------          | ----------- |
 | Initialisation du repo GitHub  + rédaction README        | Rédaction README 
-| Création table **Movies** en fonction du modèle JSON de l'API        | Configuration de la connection Python<->Oracle + Création table **Users** |
-| Création du script de création de la DB et des tables (sequences, triggers)          |   |
+| Création du script de création de la table **Movies** en fonction du modèle JSON de l'API        | Configuration de la connection Python<->Oracle + Création du script de la création de la table **Users** |
 | Récupérer données - requêtes API + DB         | Récupérer données - requêtes API + DB   |
 | Création jeu d'essai         | Création jeu d'essai   |
 |  Movie processing (insert, getdatafromDB for dashboard, details, search)   | Login/Signup processing
