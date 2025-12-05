@@ -36,7 +36,7 @@ Vous êtes prêt à faire votre première requête pour fetcher des données de 
 - 11. Un début de jeu d'essai sera alimenté dans la DB
 - 12. Si vous voulez ajouter un autre film
     - a. Mettre à jour **search_title = "&s=[movie title]"** par une autre valeur souhaitée (exemple : 'harry potter')
-    - b. Rédémarrer l'app Flask et répéter l'étape 9 ci-dessus
+    - b. Rédémarrer l'app Flask et répéter l'étape 10 ci-dessus
 
 
 ## Démarches de l'app livrée
@@ -46,7 +46,7 @@ Vous êtes prêt à faire votre première requête pour fetcher des données de 
 - effectuer une requête sur une API pour récupérer des données d'un film et manipuler le format pour le spectre d'application du site en Flask.
 - récupérer les données de l'ensemble des films présents dans la DB et l'afficher à l'utilisateur
 - récupérer les données d'un film sélectionné présent dans la DB et afficher les détails à l'utilisateur
-- rechercher un film par (titre, année de sortie, genre, acteur(s), langue, synopsis de l'intrigue). Exemple : "devil" pour "The Devil Wears Prada"
+- rechercher un film par [titre, année de sortie, genre, acteur(s), langue, synopsis de l'intrigue]. Exemple : "devil" pour "The Devil Wears Prada"
 
 ## Répartition des tâches
 | Navid SABETE ISFAHANI  | Tahina HONI RIKA |
@@ -62,4 +62,4 @@ Vous êtes prêt à faire votre première requête pour fetcher des données de 
 
 ## Perspectives futures
 - optimisation fonctionnelle (étendre le spectre d'application à d'autres types comme les séries - pour l'instant le jeu d'essai doit se limiter à des films pour assurer le modèle actuel opérationnel)
-- optimisation de code
+- optimisation de code (exemple : commentaire à ajouter pour la méthode *rows_to_dicts(cursor*) pour indiquer que l'on transforme les lignes data en un dictionnaire complet pour pouvoir mapper les variables sur les vues, opérations, etc.)
