@@ -13,29 +13,29 @@
 3. Se connecter à la **MiniNetflixDB**
 4. Éxécuter le script 'sql/create.sql' pour créer les tables
 5. Pour faire fonctionner cette application Flask, il est important de :
-- a. s'assurer que Python est bien installé sur la machine
-- b. vérifier que les librairies importées sont bien installées --> command type :"[myLocalPathToPythonExe]/python.exe -m pip install oracledb"
-- oracledb
-- flask
-- requests
+    - a. s'assurer que Python est bien installé sur la machine
+    - b. vérifier que les librairies importées sont bien installées --> command type :"[myLocalPathToPythonExe]/python.exe -m pip install oracledb"
+        - oracledb
+        - flask
+        - requests
 6. Pour pouvoir effectuer des requêtes sur l'API OMDb :
-- a. Générer votre clé API à travers l'URL suivante https://www.omdbapi.com/apikey.aspx en renseignant : **FREE! (1,0000 daily limit)**, votre **adresse mail**, **prénom**, **nom**, utilisation : **Educational use for learning to use an API**. Suivre les étapes pour activer votre clé.
-- b. Insérer votre clé dans *'api/api_secret.py'* avec ce nommage **key = '[votre clé générée]'**'
-- c. Pour que la requête fonctionne avec succès, un paramètre d'attribut de **movie** doit être renseigné, donc dans *'api/api_secret.py'* indiquez une valeur pour rechercher un film et commencer à créer un jeu d'essai. Nommage : **search_title = "&s=[movie title]"** (exemple : 'star' pour 'star wars', 'star trek')
+    - a. Générer votre clé API à travers l'URL suivante https://www.omdbapi.com/apikey.aspx en renseignant : **FREE! (1,0000 daily limit)**, votre **adresse mail**, **prénom**, **nom**, **utilisation** : **Educational use for learning to use an API**. Suivre les étapes pour activer votre clé.
+    - b. Insérer votre clé dans *'api/api_secret.py'* avec ce nommage **key = '[votre clé générée]'**'
+    - c. Pour que la requête fonctionne avec succès, un paramètre d'attribut de **movie** doit être renseigné, donc dans *'api/api_secret.py'* indiquez une valeur pour rechercher un film et commencer à créer un jeu d'essai. Nommage : **search_title = "&s=[movie title]"** (exemple : 'star' pour 'star wars', 'star trek')
 7. Pour la connexion avec MiniNetflixDB avec l'app et pour alimenter votre jeu d'essai, les étapes sont les suivantes :
-a. mettre à jour les valeurs dans *'db/db_secret.py'* avec ce nommage
-**_un = "*[utilisateur configuré lors de l'installation d'Oracle DB]*"**
-**_cs = "*[Hostname:Port configuré lors de l'installation d'Oracle DB]/[ServiceName configuré lors de l'installation d'Oracle DB]*"**
-**_pw = '*[mot de passe choisi lors de l'installation d'Oracle DB]*'**
-**_connection = None**
+    a. mettre à jour les valeurs dans *'db/db_secret.py'* avec ce nommage
+        - **_un = "*[utilisateur configuré lors de l'installation d'Oracle DB]*"**
+        - **_cs = "*[Hostname:Port configuré lors de l'installation d'Oracle DB]/[ServiceName configuré   lors  de l'installation d'Oracle DB]*"**
+        - **_pw = '*[mot de passe choisi lors de l'installation d'Oracle DB]*'**
+        - **_connection = None**
 
 Vous êtes prêt à faire votre première requête pour fetcher des données de l'API donc
-8. Démarrer l'app Flask
-9. Une fois la page d'accueil ouverte, mettez à jour l'URL en ajoutant l'endpoint */movies/callapi*
-10. Un début de jeu d'essai sera alimenté dans la DB
-11. Si vous voulez ajouter un autre film
-a. Mettre à jour **search_title = "&s=[movie title]"** par une autre valeur souhaitée (exemple : 'harry potter')
-c. Rédémarrer l'app Flask et répéter l'étape 9 ci-dessus
+- 8. Démarrer l'app Flask
+- 9. Une fois la page d'accueil ouverte, mettez à jour l'URL en ajoutant l'endpoint */movies/callapi*
+- 10. Un début de jeu d'essai sera alimenté dans la DB
+- 11. Si vous voulez ajouter un autre film
+    - a. Mettre à jour **search_title = "&s=[movie title]"** par une autre valeur souhaitée (exemple : 'harry potter')
+    - b. Rédémarrer l'app Flask et répéter l'étape 9 ci-dessus
 
 
 ## Démarches de l'app livrée
@@ -50,7 +50,7 @@ c. Rédémarrer l'app Flask et répéter l'étape 9 ci-dessus
 ## Répartition des tâches
 | Navid SABETE ISFAHANI  | Tahina HONI RIKA |
 | -------------          | ----------- |
-| Initialisation du repo GitHub  + rédaction README        | rédaction README 
+| Initialisation du repo GitHub  + rédaction README        | Rédaction README 
 | Création table **Movies** en fonction du modèle JSON de l'API        | Configuration de la connection Python<->Oracle + Création table **Users** |
 | Création du script de création de la DB et des tables (sequences, triggers)          |   |
 | Récupérer données - requêtes API + DB         | Récupérer données - requêtes API + DB   |
