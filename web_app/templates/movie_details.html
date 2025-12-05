@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{m.title}} {% endblock %}
+
+{% block content %}
+
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-4 mb-4">
+            <div class="card h-100 text-center shadow-sm">
+                <img src="{{ m.poster_url }}" 
+                     class="card-img-top mx-auto"
+                     alt="Poster of {{ m.title }}"
+                     style="width: 70%; height: auto;">
+
+                <div class="card-body">
+                <h5 class="card-title">{{ m.title }}</h5>
+
+                    <p class="card-text text-muted">
+                        {{ m.plot }}
+                    </p>
+
+                    
+                    <ul class="list-group list-group-flush my-3">
+                        <li class="list-group-item"><strong>Genre:</strong> {{ m.genre }}</li>
+                        <li class="list-group-item"><strong>Released:</strong> {{ m.released }}</li>
+                        <li class="list-group-item"><strong>Director:</strong> {{ m.director }}</li>
+                        <li class="list-group-item"><strong>Duration:</strong> {{ m.runtime }} mins</li>
+                        <li class="list-group-item"><strong>Writer:</strong> {{ m.writer }} </li>
+                        <li class="list-group-item"><strong>Actors:</strong> {{ m.actors }} </li>
+                        <li class="list-group-item"><strong>Language:</strong> {{ m.language }} </li>
+                        <li class="list-group-item"><strong>Ratings:</strong> {{ m.ratings }}/10 </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+            </div>
+        
+</div>
+
+{% endblock %}

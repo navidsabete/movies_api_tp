@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}Movies list{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+    <h2 class="mb-4 text-center">My movies</h2>
+
+    <div class="row g-4">
+        {% for m in movies %}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <a href="/movies/{{m.id}}" class="text-decoration-none text-dark">
+
+                <div class="card shadow-sm h-100">
+                    <img src="{{ m.poster_url}}" class="card-img-top" alt="{{ m.title }}" style="height: 200px; object-fit: cover;">
+                    
+                    <div class="card-body text-center">
+                        <h5 class="card-title">{{ m.title }}</h5>
+                    </div>
+                </div>
+
+            </a>
+        </div>
+        {% endfor %}
+        
+    </div>
+</div>
+
+ {% endblock %}
