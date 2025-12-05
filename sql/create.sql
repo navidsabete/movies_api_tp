@@ -20,3 +20,5 @@ CREATE TABLE users (
     pwd VARCHAR(255)
 );
 
+ALTER TABLE films MODIFY 
+released INT;
