@@ -1,7 +1,7 @@
 CREATE TABLE films (
     id VARCHAR(255) NOT NULL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
-    released DATE,
+    released INT,
     runtime INT,
     genre VARCHAR(100),
     director VARCHAR(100),
@@ -18,5 +18,5 @@ CREATE TABLE users (
     username VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
     pwd VARCHAR(255)
-)
+);
 
