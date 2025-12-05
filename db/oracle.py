@@ -1,8 +1,8 @@
 import oracledb
 
-_un = ""
-_cs = ""
-_pw = ''
+_un = "SYSTEM"
+_cs = "localhost:1522/XEPDB1"
+_pw = 'tporacle12345'
 _connection = None
 
 
