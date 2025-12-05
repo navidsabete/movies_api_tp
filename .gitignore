@@ -1,6 +1,7 @@
 # cache folder
 /api/__pycache__/
 /db/__pycache__/
+/web_app/__pycache__
 
 # secrets
 /api/api_secret.py
