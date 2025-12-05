@@ -28,12 +28,16 @@
                                 name="search_query"
                                 required
                             >
-                            <button class="btn btn-primary" type="submit">Rechercher</button>
+                            <button class="btn btn-primary" type="submit">Search</button>
                         </form>
                     </div>
                     </div>
                 </div>
             </div>
+            {% if session.get("user_id") %}
+                <!-- Si l'utilisateur est connecté -->
+                <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+            {% endif %}
         </div>
     </nav>
     <div class="container">

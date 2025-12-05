@@ -1,12 +1,12 @@
 from api import api_secret
-from db.oracle import db
-import requests, oracledb
-from datetime import date
+from db.oracle import db, oracledb
+import requests
 
 def getDataFromAPI():
     url = 'http://www.omdbapi.com/?apikey='
     api = url + api_secret.key + api_secret.search_title
     responseGetMovies = requests.get(api)
+
     # get all movie data
     getMovies = responseGetMovies.json()
     movie = getMovies["Search"]
@@ -91,7 +91,6 @@ def getMovieDataFromDB(id):
 
 def searchMovieDataFromDB(search = ''):
     search_sql = f'%{search}%'
-    print(search_sql)
     connection = db()
     cursor = connection.cursor()
     cursor.execute("""
