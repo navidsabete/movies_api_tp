@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
-{% block title %}Movies list{% endblock %}
+{% block title %}List search results for "{{search_query}}"{% endblock %}
 
 {% block content %}
 
 <div class="container py-5">
-    <h2 class="mb-4 text-center">My movies</h2>
+    <h2 class="mb-4 text-center">Search results for "{{search_query}}"</h2>
 
     <div class="row g-4">
         {% for m in movies %}
