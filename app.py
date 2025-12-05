@@ -1,16 +1,5 @@
 
 import os, sys
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
- 
-parent_dir = os.path.dirname(os.path.dirname(__file__))
-sys.path.append(parent_dir)
-
-from flask import Flask, render_template, redirect, request, url_for
-from movie_processing import getDataFromDB, getDataFromAPI, getMovie, searchMovieFromDb
-=======
->>>>>>> sauvegarde-modifs
 parent_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(parent_dir)
 
@@ -19,53 +8,21 @@ from movie_processing import getDataFromDB, getDataFromAPI, getMovie, searchMovi
 from login_process import createUser, login
 from werkzeug.security import generate_password_hash, check_password_hash
 
-<<<<<<< HEAD
-=======
->>>>>>> d891a53 (logini)
->>>>>>> sauvegarde-modifs
 
 app = Flask(__name__)
 
 app.secret_key = os.urandom(24)
 @app.route("/")
 def movies_homepage():
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    allMovies = getDataFromDB()
-    return render_template('home.html', movies = allMovies)
-=======
->>>>>>> sauvegarde-modifs
     if "user_id" not in session:
         return redirect(url_for("signin"))
     allMovies = getDataFromDB()
     return render_template('home.html', movies=allMovies)
-<<<<<<< HEAD
-=======
->>>>>>> d891a53 (logini)
->>>>>>> sauvegarde-modifs
 
 @app.route("/movies/callapi")
 def call_movies_api():
     getDataFromAPI()
     return redirect(url_for("movies_homepage"))
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-@app.route("/movies/<id>")
-def movie_details(id):
-    movie = getMovie(id)
-    return render_template('movie_details.html', m = movie)
-
-
-@app.route("/movies/", methods=["GET"])
-def movies_search():
-    search_query = request.args.get("search_query") 
-    movies = searchMovieFromDb(search_query)
-    return render_template('search_result.html', search_query = search_query, movies = movies)
-=======
->>>>>>> sauvegarde-modifs
 
 @app.route("/movies/<id>")
 def movie_details(id):
@@ -115,7 +72,3 @@ def signup():
 def logout():
     session.clear() 
     return redirect(url_for("signin"))
-<<<<<<< HEAD
-=======
->>>>>>> d891a53 (logini)
->>>>>>> sauvegarde-modifs
