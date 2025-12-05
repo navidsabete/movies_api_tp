@@ -9,41 +9,17 @@
     <title>Home</title>
 </head>
 <body>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Poster</th>
-                <th scope="col">imdbID</th>
-                <th scope="col">Title</th>
-                <th scope="col">Released</th>
-                <th scope="col">Runtime</th>
-                <th scope="col">Genre</th>
-                <th scope="col">Director</th>
-                <th scope="col">Writer</th>
-                <th scope="col">Actors</th>
-                <th scope="col">imdbRating</th>
-                <th scope="col">Language</th>
-                <th scope="col">Plot</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- {% for movie in films %}
-                <tr>        
-                    <td><img src="{{ movie.poster_url }}" ></td>
-                    <td>{{ movie.id }}</th>
-                    <td>{{ movie.title }}</td>
-                    <td>{{ movie.released }}</td>
-                    <td>{{ movie.runtime }}</td>
-                    <td>{{ movie.genre }}</td>
-                    <td>{{ movie.director }}</td>
-                    <td>{{ movie.writer }}</td>
-                    <td>{{ movie.actors }}</td>
-                    <td>{{ movie.ratings }}</td>
-                    <td>{{ movie.language }}</td>
-                    <td>{{ movie.plot }}</td>
-                </tr>
-            {% endfor %} -->
-        </tbody>
-    </table>
+            {% for m in movies %}
+               
+                <div class="card-group">
+                    <div class="card">
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ m.title }}</h5>
+                            <p class="card-text">{{ m.plot }}</p>
+                            </div>
+                    </div>
+                </div>
+            {% endfor %}     
 </body>
 </html>
