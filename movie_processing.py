@@ -71,3 +71,14 @@ def getDataFromDB():
     for f in getFilms:
         print(f)
     return getFilms
+
+def getMovie(id):
+    connection = db()
+    cursor = connection.cursor()
+    cursor.execute("SELECT * FROM films WHERE id = :id", {"id": id})
+    getFilm = cursor.fetchone()
+    columns = []
+    for col in cursor.description:
+        columns.append(col[0].lower())
+    movie = dict(zip(columns, getFilm))
+    return movie

@@ -4,7 +4,7 @@ parent_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(parent_dir)
 
 from flask import Flask, render_template
-from movie_processing import getDataFromDB
+from movie_processing import getDataFromDB, getMovie
 
 app = Flask(__name__)
 
@@ -15,5 +15,5 @@ def movies_homepage():
 
 @app.route("/movies/<id>")
 def movie_details(id):
-    allMovies = getDataFromDB()
-    return render_template('home.html', movies = allMovies)
+    movie = getMovie(id)
+    return render_template('movie_details.html', m = movie)
